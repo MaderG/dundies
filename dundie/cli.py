@@ -31,13 +31,11 @@ def load(filepath):
     """
     result = core.load(filepath)
     table = Table(title="Dundler Mifflin Associates")
-    headers = ["name", "department", "role", "email"]
+    headers = ["name", "department", "role", "created", "email"]
     for header in headers:
         table.add_column(header, style="blue")
     for person in result:
-        table.add_row(
-            *[field.strip() for field in person.split(",")]
-        )
+        table.add_row(*[str(value) for value in person.values()])
 
     console = Console()
     console.print(table)

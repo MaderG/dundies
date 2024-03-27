@@ -12,4 +12,4 @@ def test_load_positive_has_2_people():
 @pytest.mark.unit
 def test_load_positive_has_first_name_starts_with_j():
     """Test the load function"""
-    assert load(PEOPLE_FILE)[0][0] == "J"
+    assert load(PEOPLE_FILE)[0]["name"][0] == "J"

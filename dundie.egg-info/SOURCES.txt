@@ -5,6 +5,8 @@ dundie/__init__.py
 dundie/__main__.py
 dundie/cli.py
 dundie/core.py
+dundie/database.py
+dundie/settings.py
 dundie.egg-info/PKG-INFO
 dundie.egg-info/SOURCES.txt
 dundie.egg-info/dependency_links.txt
@@ -12,8 +14,8 @@ dundie.egg-info/entry_points.txt
 dundie.egg-info/requires.txt
 dundie.egg-info/top_level.txt
 integration/__init__.py
-integration/conftest.py
 integration/constants.py
 integration/test_load.py
+tests/test_database.py
 tests/test_load.py
 tests/test_utils.py

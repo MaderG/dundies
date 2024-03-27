@@ -23,5 +23,4 @@ def test_generate_password():
     passwords = []
     for _ in range(100):
         passwords.append(generate_password(8))
-    
     assert len(set(passwords)) == 100
