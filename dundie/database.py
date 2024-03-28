@@ -1,9 +1,9 @@
 import json
-from dundie.settings import EMAIL_FROM
-from dundie.settings import DATABASE_PATH
-from dundie.utils.user import generate_password
-from dundie.utils.email import is_email, send_email
 from datetime import datetime
+
+from dundie.settings import DATABASE_PATH, EMAIL_FROM
+from dundie.utils.email import is_email, send_email
+from dundie.utils.user import generate_password
 
 DB_SCHEMA = {
     "people": {},
@@ -63,14 +63,14 @@ def set_balance(db, pk, person):
     add_movement(db, pk, value)
 
 
-def add_movement(db, pk, value):
+def add_movement(db, pk, value, actor="system"):
     """Add movement to the database"""
     movements = db["movement"].setdefault(pk, [])
     movements.append(
         {
             "date": datetime.now().isoformat(),
             "amount": value,
-            "actor": "system",
+            "actor": actor,
         }
     )
     db["balance"][pk] = sum(m["amount"] for m in movements)

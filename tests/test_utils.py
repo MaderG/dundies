@@ -1,4 +1,5 @@
 import pytest
+
 from dundie.utils.email import is_email
 from dundie.utils.user import generate_password
 
