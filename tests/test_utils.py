@@ -1,4 +1,5 @@
 import pytest
+
 from dundie.utils.email import is_email
 from dundie.utils.user import generate_password
 
@@ -23,5 +24,4 @@ def test_generate_password():
     passwords = []
     for _ in range(100):
         passwords.append(generate_password(8))
-    
     assert len(set(passwords)) == 100
