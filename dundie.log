@@ -1,6 +1,0 @@
-2024-03-28 16:14:40,164  dundie  ERROR l:29 f:email.py: Cannot send email to ['stanley@dundermifflin.com']
-2024-03-28 16:14:40,164  dundie  ERROR l:29 f:email.py: Cannot send email to ['stanley@dundermifflin.com']
-2024-03-28 16:14:44,266  dundie  ERROR l:29 f:email.py: Cannot send email to ['jim@dundermifflin.com']
-2024-03-28 16:14:44,266  dundie  ERROR l:29 f:email.py: Cannot send email to ['jim@dundermifflin.com']
-2024-04-03 03:06:14,778  dundie  ERROR l:30 f:email.py: Cannot send email to ['glewis@dundlermifflin.com']
-2024-04-03 03:06:14,778  dundie  ERROR l:30 f:email.py: Cannot send email to ['glewis@dundlermifflin.com']
