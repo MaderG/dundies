@@ -16,6 +16,8 @@ dundie.egg-info/top_level.txt
 integration/__init__.py
 integration/constants.py
 integration/test_load.py
+tests/test_add.py
 tests/test_database.py
 tests/test_load.py
+tests/test_read.py
 tests/test_utils.py

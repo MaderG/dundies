@@ -9,11 +9,17 @@
             "name": "Dwight Schrute",
             "dept": "Sales",
             "role": "Manager"
+        },
+        "glewis@dundlermifflin.com": {
+            "name": "Gabe Lewis",
+            "dept": "Director",
+            "role": "Manager"
         }
     },
     "balance": {
-        "jim@dundermifflin.com": 500,
-        "dwight@dundermifflin.com": 100
+        "jim@dundermifflin.com": 600,
+        "dwight@dundermifflin.com": 100,
+        "glewis@dundlermifflin.com": 100
     },
     "movement": {
         "jim@dundermifflin.com": [
@@ -44,6 +50,42 @@
                     "name": "Jim Halpert",
                     "dept": "Sales",
                     "role": "Salesman"
+                }
+            },
+            {
+                "date": "2024-04-03T03:10:22.991104",
+                "amount": -2,
+                "actor": {
+                    "email": "jim@dundermifflin.com",
+                    "name": "Jim Halpert",
+                    "dept": "Sales",
+                    "role": "Salesman",
+                    "balance": 500,
+                    "last_movement": "2024-03-28T16:26:58.286204"
+                }
+            },
+            {
+                "date": "2024-04-03T03:10:35.812137",
+                "amount": 2,
+                "actor": {
+                    "email": "jim@dundermifflin.com",
+                    "name": "Jim Halpert",
+                    "dept": "Sales",
+                    "role": "Salesman",
+                    "balance": 498,
+                    "last_movement": "2024-04-03T03:10:22.991104"
+                }
+            },
+            {
+                "date": "2024-04-03T03:10:55.472729",
+                "amount": 100,
+                "actor": {
+                    "email": "jim@dundermifflin.com",
+                    "name": "Jim Halpert",
+                    "dept": "Sales",
+                    "role": "Salesman",
+                    "balance": 500,
+                    "last_movement": "2024-04-03T03:10:35.812137"
                 }
             }
         ],
@@ -77,6 +119,13 @@
                     "role": "Manager"
                 }
             }
+        ],
+        "glewis@dundlermifflin.com": [
+            {
+                "date": "2024-04-03T03:06:10.667079",
+                "amount": 100,
+                "actor": "system"
+            }
         ]
     },
     "users": {
@@ -85,6 +134,9 @@
         },
         "dwight@dundermifflin.com": {
             "password": "iRBs1eIX"
+        },
+        "glewis@dundlermifflin.com": {
+            "password": "OztFYPmT"
         }
     }
 }

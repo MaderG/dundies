@@ -54,7 +54,7 @@ def show(output, **query):
         print("No records found")
         return
     if output:
-        with open(output, 'w') as output_file:
+        with open(output, "w") as output_file:
             output_file.write(json.dumps(result))
 
     table = Table(title="Dunder Mifflin Report")

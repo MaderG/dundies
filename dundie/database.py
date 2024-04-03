@@ -64,7 +64,7 @@ def set_balance(db, pk, person):
 
 
 def add_movement(db, pk, value, actor="system"):
-    """Add movement to the database"""
+    """Add movement to user account"""
     movements = db["movement"].setdefault(pk, [])
     movements.append(
         {
