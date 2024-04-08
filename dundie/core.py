@@ -1,7 +1,7 @@
 import os
 from csv import reader
 
-from dundie.database import add_movement, add_user, commit, connect
+from dundie.database import add_movement, add_person, commit, connect
 from dundie.utils.log import get_logger
 
 log = get_logger()
@@ -21,7 +21,7 @@ def load(filepath):
     for line in csv_data:
         person_data = dict(zip(headers, (item.strip() for item in line)))
         pk = person_data.pop("email")
-        person, created = add_user(db, pk, person_data)
+        person, created = add_person(db, pk, person_data)
         return_data = person.copy()
         return_data["created"] = created
         return_data["email"] = pk

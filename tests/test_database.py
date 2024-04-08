@@ -1,6 +1,12 @@
 import pytest
 
-from dundie.database import DB_SCHEMA, add_movement, add_user, commit, connect
+from dundie.database import (
+    DB_SCHEMA,
+    add_movement,
+    add_person,
+    commit,
+    connect,
+)
 
 
 @pytest.mark.unit
@@ -36,7 +42,7 @@ def test_add_person_for_the_first_time():
     }
 
     db = connect()
-    _, created = add_user(db, pk, data)
+    _, created = add_person(db, pk, data)
     assert created is True
     commit(db)
     db = connect()
@@ -50,7 +56,7 @@ def test_add_person_for_the_first_time():
 def test_negative_add_person_invalid_email():
     with pytest.raises(ValueError):
         db = {}
-        add_user(db, "ed@valdo", {})
+        add_person(db, "ed@valdo", {})
 
 
 @pytest.mark.unit
@@ -62,7 +68,7 @@ def test_positive_add_value_for_user():
         "department": "Sales",
     }
     db = connect()
-    _, created = add_user(db, pk, data)
+    _, created = add_person(db, pk, data)
     assert created is True
     commit(db)
     db = connect()
@@ -74,5 +80,3 @@ def test_positive_add_value_for_user():
     assert new_balance == old_balance + 100
     assert new_balance == 600
     assert old_balance == 500
-
-

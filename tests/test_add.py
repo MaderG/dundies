@@ -1,7 +1,7 @@
 import pytest
 
 from dundie.core import add
-from dundie.database import add_user, commit, connect
+from dundie.database import add_person, commit, connect
 
 
 @pytest.mark.unit
@@ -13,7 +13,7 @@ def test_add_movement():
         "role": "Salesman",
         "dept": "Sales",
     }
-    _, created = add_user(db, pk, data)
+    _, created = add_person(db, pk, data)
     assert created is True
 
     pk = "jim@dundermifflin.com"
@@ -22,7 +22,7 @@ def test_add_movement():
         "role": "Manager",
         "dept": "Management",
     }
-    _, created = add_user(db, pk, data)
+    _, created = add_person(db, pk, data)
     assert created is True
     commit(db)
 

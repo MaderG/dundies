@@ -28,7 +28,7 @@ def commit(db):
         f.write(json.dumps(db, indent=4))
 
 
-def add_user(db, pk, data):
+def add_person(db, pk, data):
     """Saves a user to the database"""
     if is_email(pk) is False:
         raise ValueError("Invalid email")
