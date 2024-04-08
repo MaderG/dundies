@@ -18,7 +18,7 @@ def read_requirements(path):
 
 
 setup(
-    name="dundies",
+    name="dundie",
     version="0.1.1",
     description="Reward points system for Dunder Mifflin",
     author="Mader",
