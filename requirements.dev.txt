@@ -1,5 +1,11 @@
+# Code Quality
 flake8
 pyproject-flake8
 black
 isort
+
+# Docs
 mkdocs
+
+# Build
+wheel

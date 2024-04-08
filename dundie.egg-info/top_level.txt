@@ -1,2 +1,2 @@
 dundie
-integration
+tests

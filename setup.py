@@ -18,11 +18,13 @@ def read_requirements(path):
 
 
 setup(
-    name="dundie",
-    version="0.1.0",
+    name="dundies",
+    version="0.1.1",
     description="Reward points system for Dunder Mifflin",
     author="Mader",
-    packages=find_packages(),
+    python_requires=">=3.10",
+    packages=find_packages(exclude=["integration"]),
+    include_package_data=True,
     entry_points={"console_scripts": ["dundie = dundie.__main__:main"]},
     install_requires=read_requirements("requirements.txt"),
     extras_require={
